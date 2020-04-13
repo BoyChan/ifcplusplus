@@ -174,7 +174,7 @@ void ReaderSTEP::loadModelFromFile( const std::wstring& filePath, shared_ptr<Bui
 	infile.seekg( 0, std::ios::beg );
 
 	// read file content into string
-	std::string buffer( (int)file_size, '\0' );
+	std::string buffer( (size_t)file_size, '\0' );
 	infile.read( &buffer[0], file_size );
 	infile.close();
 
